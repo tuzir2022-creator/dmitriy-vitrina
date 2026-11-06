@@ -6,9 +6,8 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const canHover = window.matchMedia("(hover: hover)").matches;
 
-  // Куда отправлять заявки. ЗАМЕНИТЬ: адрес Вашего обработчика
-  // (например, Telegram-бот, Formspree, Make). Пока пусто — заявка никуда не уходит.
-  const FORM_ENDPOINT = "";
+  // Куда отправляются заявки: Worker в Cloudflare, он пересылает их в Telegram (код: форма-витрина-api/worker.js)
+  const FORM_ENDPOINT = "https://vitrina-form-api.tuzir2022.workers.dev";
 
   /* ---------- 2. Заголовок по словам с общим градиентом ---------- */
   function initTitle() {

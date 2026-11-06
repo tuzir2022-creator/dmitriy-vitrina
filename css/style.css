@@ -747,3 +747,6 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 /* Карточки тарифов не должны выпирать за плашку на узких экранах */
 @media (max-width: 1080px) { .prices { grid-template-columns: minmax(0, 1fr); } }
 .price .btn { width: 100%; text-align: center; --pad: 16px 20px; }
+
+/* Ловушка для спам-ботов: человек это поле не видит */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
