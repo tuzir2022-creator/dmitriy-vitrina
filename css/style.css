@@ -750,3 +750,10 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
 
 /* Ловушка для спам-ботов: человек это поле не видит */
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+/* Крупный шрифт на телефонах: длинные заголовки не вылезают за карточку */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+h1, h2, h3 { overflow-wrap: break-word; }
+.price, .offer, .card { min-width: 0; }
+.price h3 { font-size: clamp(19px, 5.4vw, 24px); }
+@media (max-width: 420px) { .price h3 { font-size: clamp(17px, 5vw, 21px); } .h2 { font-size: clamp(26px, 8vw, 34px); } }
