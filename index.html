@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Дмитрий Смирнов — сайты для малого бизнеса</title>
+  <meta name="description" content="Сайты для мастеров, кафе, сервисов и частных специалистов по всей России. Под ключ: тексты, дизайн, заявки в Telegram.">
+  <meta name="theme-color" content="#FBFBF9">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Живой фон: мягкие цветные пятна медленно плавают -->
+  <div class="blobs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+  <header class="header" id="header">
+    <a class="logo" href="#top" aria-label="Дмитрий Смирнов — на главную">
+      <span class="logo__mark">ДС</span>
+      <span class="logo__name">Дмитрий Смирнов</span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#calc">Калькулятор</a>
+      <a href="#included">Что входит</a>
+      <a href="#process">Как работаем</a>
+      <a href="#prices">Цены</a>
+      <a href="#guarantee">Гарантия</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="btn btn--glow btn--sm" href="#order" data-magnetic>Обсудить сайт</a>
+  </header>
+
+  <main id="top">
+    <!-- ГЕРОЙ: сайт собирается на глазах -->
+    <section class="hero">
+      <div class="hero__text">
+        
+        <h1 class="hero__title" data-split>Сайт, с&nbsp;которого клиенты записываются сами</h1>
+        <p class="hero__lead">Делаю сайты для мастеров, кафе, сервисов, ремонта и частных специалистов. Пишу тексты, делаю дизайн и настраиваю всё так, чтобы заявки приходили Вам в Telegram. Цена от 15 000 ₽, зависит от типа сайта.</p>
+        <div class="hero__actions">
+          <a class="btn btn--glow" href="#order" data-magnetic>Обсудить мой сайт</a>
+          <a class="btn btn--ghost" href="#prices">Посмотреть цены</a>
+        </div>
+      </div>
+
+      <div class="hero__demo">
+        <div class="niche-tabs" role="tablist" aria-label="Пример сайта для ниши">
+          <button role="tab" aria-selected="false" data-phone="0">Цветы</button>
+          <button role="tab" aria-selected="true" data-phone="1">Строительство</button>
+          <button role="tab" aria-selected="false" data-phone="2">Кулинарная студия</button>
+        </div>
+
+        <!-- Веер телефонов: выбранный выезжает вперёд -->
+        <div class="phones" id="phones" aria-live="polite">
+          <div class="phone" data-phone="0" style="--c1:#1F5BFF;--c2:#1F5BFF">
+            <div class="phone__screen phone__screen--shot"><img src="assets/iris-m.webp" alt="Сайт цветочного магазина" loading="lazy"></div>
+          </div>
+          <div class="phone" data-phone="1" style="--c1:#FFF700;--c2:#171112">
+            <div class="phone__screen phone__screen--shot"><img src="assets/dacha-m.webp" alt="Сайт строительства домов" loading="lazy"></div>
+          </div>
+          <div class="phone" data-phone="2" style="--c1:#FFF0D9;--c2:#756D60">
+            <div class="phone__screen phone__screen--shot"><img src="assets/kinza-m.webp" alt="Сайт кулинарной студии" loading="lazy"></div>
+          </div>
+          <div class="toast" id="demoToast">
+            <span class="toast__icon">✓</span>
+            <span><b>Новая заявка</b><small id="demoToastText">Первая встреча, четверг 19:00</small></span>
+          </div>
+        </div>
+        <p class="hero__demo-note">Это экраны реальных сайтов из портфолио. Нажмите на нишу или на телефон</p>
+      </div>
+    </section>
+
+    <!-- Бегущая строка ниш -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Кулинарные студии</span><span>Дачные дома и бани</span><span>Маникюр и педикюр</span><span>СПА и массаж</span><span>Шиномонтаж</span><span>Цветы и букеты</span><span>Квесты с актёрами</span><span>Детские центры</span><span>Кофейни</span><span>Грузинская кухня</span><span>Переезды</span><span>Конструкторы из картона</span>
+        <span>Кулинарные студии</span><span>Дачные дома и бани</span><span>Маникюр и педикюр</span><span>СПА и массаж</span><span>Шиномонтаж</span><span>Цветы и букеты</span><span>Квесты с актёрами</span><span>Детские центры</span><span>Кофейни</span><span>Грузинская кухня</span><span>Переезды</span><span>Конструкторы из картона</span>
+      </div>
+    </div>
+
+    <!-- Калькулятор потерь -->
+    <section class="section calc plate plate--pink" id="calc">
+      <div class="calc__intro" data-reveal>
+        <h2 class="h2">Сколько клиентов может проходить мимо Вас</h2>
+        <p class="lead">Человек ищет услугу в Яндексе, не находит Ваш сайт и звонит тому, кого нашёл. Подставьте свои цифры и прикиньте, сколько это может стоить в месяц.</p>
+      </div>
+      <div class="calc__box glass" data-reveal style="--d:.1s">
+        <label class="range">
+          <span class="range__head">Средний чек<output id="checkOut">2 500 ₽</output></span>
+          <input type="range" id="check" min="500" max="20000" step="500" value="2500">
+        </label>
+        <label class="range">
+          <span class="range__head">Сколько клиентов в неделю, по-Вашему, не находят Вас<output id="lostOut">3</output></span>
+          <input type="range" id="lost" min="1" max="30" step="1" value="3">
+        </label>
+        <div class="calc__result">
+          <div>
+            <span class="calc__label">Мимо Вас может проходить</span>
+            <strong class="calc__money" id="lossMoney">32 250 ₽</strong>
+            <span class="calc__label">выручки в месяц</span>
+          </div>
+          <div class="calc__payback">
+            Если сайт вернёт хотя бы треть этих клиентов, одностраничный сайт за 15 000 ₽ окупится примерно за <b id="payback">2 месяца</b>
+          </div>
+        </div>
+        <p class="calc__note">Это оценка, а не обещание: точное число клиентов, которые Вас не нашли, не знает никто. Расчёт: чек × клиенты в неделю × 4,3 недели.</p>
+      </div>
+    </section>
+
+    <!-- Что входит -->
+    <section class="section" id="included">
+      <h2 class="h2" data-reveal>Что Вы получите</h2>
+      <div class="bento">
+        <article class="card card--wide" data-reveal data-glow>
+          <div class="card__art art-texts" aria-hidden="true"><span></span><span></span><span></span></div>
+          <h3>Тексты, которые объясняют и продают</h3>
+          <p>Расспрошу о Вашем деле и напишу тексты сам. Клиент сразу видит, что Вы делаете, сколько это стоит и как к Вам записаться.</p>
+        </article>
+        <article class="card" data-reveal data-glow style="--d:.08s">
+          <div class="card__art art-phone" aria-hidden="true"><span></span></div>
+          <h3>Удобно с телефона</h3>
+          <p>Большинство клиентов открывают сайт со смартфона. Кнопка «Позвонить» всегда под пальцем.</p>
+        </article>
+        <article class="card" data-reveal data-glow style="--d:.16s">
+          <div class="card__art art-tg" aria-hidden="true"><span>✈</span></div>
+          <h3>Заявки в Telegram</h3>
+          <p>Каждая заявка сразу приходит Вам в мессенджер. Ничего не теряется в почте.</p>
+        </article>
+        <article class="card" data-reveal data-glow style="--d:.08s">
+          <div class="card__art art-map" aria-hidden="true"><span></span></div>
+          <h3>Карта и отзывы</h3>
+          <p>Подключу Яндекс.Карты и покажу Ваши лучшие отзывы, чтобы новым клиентам было спокойно.</p>
+        </article>
+        <article class="card" data-reveal data-glow style="--d:.16s">
+          <div class="card__art art-speed" aria-hidden="true"><span></span></div>
+          <h3>Быстрая загрузка</h3>
+          <p>Сайт быстро открывается даже на телефоне с медленным интернетом, и клиент не уходит, не дождавшись.</p>
+        </article>
+        <article class="card card--wide" data-reveal data-glow style="--d:.08s">
+          <div class="card__art art-search" aria-hidden="true"><span>Шиномонтаж рядом</span></div>
+          <h3>Чтобы Вас находили в Яндексе</h3>
+          <p>Пропишу, чем Вы занимаетесь и в каком городе работаете, и сообщу Яндексу о новом сайте. Так люди смогут найти Вас по запросу вроде «шиномонтаж рядом».</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Процесс — это последовательность, поэтому шаги пронумерованы -->
+    <section class="section process plate plate--blue" id="process">
+      <h2 class="h2" data-reveal>Как я работаю</h2>
+      <ol class="steps" id="steps">
+        <li class="step" data-reveal>
+          <span class="step__num">1</span>
+          <div><h3>Заявка, созвон и бриф</h3><p>Вы оставляете заявку, мы созваниваемся и разбираем бриф: чем занимаетесь, кто Ваши клиенты, что должен делать сайт.</p></div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num">2</span>
+          <div><h3>Договор, ТЗ и предоплата 50%</h3><p>Фиксирую в договоре и техническом задании, что именно делаем. Начинаю работу после предоплаты 50%.</p></div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num">3</span>
+          <div><h3>Анализ конкурентов и макет</h3><p>Смотрю, как продают Ваши конкуренты, и рисую макет сайта.</p></div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num">4</span>
+          <div><h3>Согласование и правки</h3><p>Показываю макет, Вы говорите, что поменять. Правим, пока Вас всё не устроит.</p></div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num">5</span>
+          <div><h3>Вёрстка, формы, аналитика и тестирование</h3><p>Верстаю сайт и адаптирую под телефон, подключаю формы заявок и аналитику, проверяю, что всё работает.</p></div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step__num">6</span>
+          <div><h3>Вторая часть оплаты и передача сайта</h3><p>Вы принимаете сайт, оплачиваете оставшиеся 50% и получаете сайт со всеми доступами.</p></div>
+        </li>
+        <span class="steps__line" aria-hidden="true"><span id="stepsFill"></span></span>
+      </ol>
+    </section>
+
+    <!-- Примеры концепций -->
+    <section class="section" id="works">
+      <div class="works__head" data-reveal>
+        <h2 class="h2">Какими бывают сайты</h2>
+        <p class="lead">Живые сайты: нажмите на карточку, чтобы открыть. Для Вас сделаю свой, под Ваш характер и Ваших клиентов.</p>
+      </div>
+      <div class="works">
+        <a class="work-link" href="https://tuzir2022-creator.github.io/hot-hands/" target="_blank" rel="noopener">
+          <figure class="work" data-reveal data-tilt style="--g2:#171112">
+            <div class="work__screen work__screen--shot"><img src="assets/work-hothands.webp" alt="Сайт студии маникюра Hot! Hands" loading="lazy"></div>
+            <figcaption>Студия маникюра: Hot! Hands<small>Онлайн-запись и прайс</small></figcaption>
+          </figure>
+        </a>
+        <a class="work-link" href="https://tuzir2022-creator.github.io/kartonograd-demo/" target="_blank" rel="noopener">
+          <figure class="work" data-reveal data-tilt style="--d:.1s;--g2:#FFCC00">
+            <div class="work__screen work__screen--shot"><img src="assets/work-karton.webp" alt="Сайт конструктора из картона Картоноград" loading="lazy"></div>
+            <figcaption>Картоноград<small>Сайт конструктора из картона</small></figcaption>
+          </figure>
+        </a>
+        <a class="work-link" href="https://tuzir2022-creator.github.io/gruzinskaya-kuhnya-demo/" target="_blank" rel="noopener">
+          <figure class="work" data-reveal data-tilt style="--d:.2s;--g2:#756D60">
+            <div class="work__screen work__screen--shot"><img src="assets/work-gruz.webp" alt="Сайт точки грузинской кухни" loading="lazy"></div>
+            <figcaption>Грузинская кухня<small>Меню с фото, корзина и заказ</small></figcaption>
+          </figure>
+        </a>
+      </div>
+    </section>
+
+    <!-- Цены. ЗАМЕНИТЬ: цифры и состав тарифов -->
+    <section class="section plate plate--violet" id="prices">
+      <h2 class="h2" data-reveal>Цены без сюрпризов</h2>
+      <p class="lead" data-reveal>Цену называю до начала работы, и дальше она не меняется. Отдельно оплачиваются только домен (адрес сайта) и хостинг (место, где он хранится): обычно 2–4 тысячи рублей в год. Помогу оформить их на Вас: после оплаты сайт полностью принадлежит Вам.</p>
+      <div class="prices">
+        <article class="price glass" data-reveal data-glow>
+          <h3>Одностраничный сайт</h3>
+          <p class="price__for">Одна страница на Tilda: оффер, услуги, отзывы и форма заявки. Подходит мастерам и специалистам, к которым приходят из соцсетей и рекламы.</p>
+          <p class="price__sum">15 000 ₽</p>
+          <ul><li>Оффер, услуги и отзывы</li><li>Форма заявки</li><li>Адаптив под телефон</li></ul>
+          <a class="btn btn--ghost" href="#order" data-plan="Одностраничный сайт">Выбрать одностраничный</a>
+        </article>
+        <article class="price price--hot" data-reveal data-glow style="--d:.1s">
+          <span class="price__badge">Оптимальный выбор</span>
+          <h3>Многостраничный сайт</h3>
+          <p class="price__for">Несколько разделов с общим меню: отдельная страница под каждую услугу. Для бизнеса с разными направлениями.</p>
+          <p class="price__sum">25 000 ₽</p>
+          <ul><li>Несколько разделов с общим меню</li><li>Формы заявок</li><li>Аналитика</li><li>Адаптив под телефон</li></ul>
+          <a class="btn btn--glow" href="#order" data-plan="Многостраничный сайт" data-magnetic>Выбрать многостраничный</a>
+        </article>
+        <article class="price glass" data-reveal data-glow style="--d:.2s">
+          <h3>Интернет-магазин</h3>
+          <p class="price__for">Каталог, карточки товаров, корзина и приём заявок. Для тех, кто продаёт товары онлайн.</p>
+          <p class="price__sum">35 000 ₽</p>
+          <ul><li>Каталог и карточки товаров</li><li>Корзина и приём заявок</li><li>Формы и аналитика</li><li>Адаптив под телефон</li></ul>
+          <a class="btn btn--ghost" href="#order" data-plan="Интернет-магазин">Выбрать магазин</a>
+        </article>
+      </div>
+      <p class="lead prices__extra" data-reveal><b>Настройка рекламы в Яндекс.Директ: 11 000 ₽.</b> Поиск и РСЯ, оптимизация с помощью ИИ. Можно заказать отдельно или вместе с сайтом.</p>
+    </section>
+
+    <!-- Гарантия. ЗАМЕНИТЬ: проверьте условия — их нужно будет выполнять и записать письменно -->
+    <section class="section guarantee" id="guarantee">
+      <h2 class="h2" data-reveal>Оплата в два этапа: 50% и 50%</h2>
+      <p class="lead" data-reveal>Первая половина — перед началом работы, вторая — после запуска, когда Вы приняли сайт. Всё записываю в договоре до того, как начну.</p>
+      <div class="offers">
+        <article class="offer offer--first" data-reveal data-glow>
+          <span class="offer__badge">Этап 1</span>
+          <h3>Предоплата 50%</h3>
+          <p>Вносите после договора и технического задания. С этого момента я начинаю работу.</p>
+          <ul class="outcomes">
+            <li class="outcome outcome--yes"><b>Договор и ТЗ</b>Фиксируем, что именно делаем и по какому списку Вы будете принимать сайт.</li>
+            <li class="outcome outcome--yes"><b>Макет</b>Анализирую конкурентов, рисую макет и показываю Вам до вёрстки.</li>
+          </ul>
+          <a class="btn btn--glow" href="#order" data-magnetic>Обсудить сайт</a>
+        </article>
+        <article class="offer" data-reveal data-glow style="--d:.1s">
+          <span class="offer__badge offer__badge--soft">Этап 2</span>
+          <h3>Оставшиеся 50%</h3>
+          <p>Оплачиваете после запуска, когда проверили сайт и приняли его по списку из договора.</p>
+          <ul class="outcomes">
+            <li class="outcome outcome--yes"><b>Сайт проверен</b>Формы, аналитика и адаптив под телефон протестированы до передачи.</li>
+            <li class="outcome outcome--yes"><b>Передача сайта</b>После второй оплаты передаю сайт со всеми доступами.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="guarantee__note" data-reveal>Все условия и список, по которому Вы принимаете сайт, фиксирую в договоре до начала работы.</p>
+    </section>
+
+    <!-- Обо мне -->
+    <section class="section about" data-reveal>
+      <div class="about__photo">
+        <img src="assets/dmitry.webp" alt="Дмитрий Смирнов" width="640" height="640" loading="lazy">
+      </div>
+      <div class="about__text">
+        <h2 class="h2">Привет, я Дмитрий</h2>
+        <p class="lead">Я делаю сайты сам, без менеджеров и посредников. Вы пишете напрямую мне, и я отвечаю сам. Мне важно, чтобы сайт не просто был красивым, а приносил Вам заявки.</p>
+        <ul class="promises">
+          <li>Работаю по договору как самозанятый, ИНН 183115419809. Выдаю чек на каждую оплату</li>
+          <li>Оплата частями: 50% в начале, 50% после запуска, когда Вы приняли сайт по списку из договора</li>
+          <li>Показываю макет до вёрстки и вношу правки, пока Вас всё не устроит</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Вопросы -->
+    <section class="section faq plate plate--mint" id="faq">
+      <h2 class="h2" data-reveal>Частые вопросы</h2>
+      <div class="faq__list" data-reveal>
+        <details>
+          <summary>Я не разбираюсь в сайтах. Справлюсь?</summary>
+          <p>Да. От Вас нужен один созвон и ответы на вопросы о Вашем деле. Тексты, картинки, домен и настройки беру на себя.</p>
+        </details>
+        <details>
+          <summary>Чем одностраничный сайт отличается от многостраничного?</summary>
+          <p>Одностраничный: всё на одной странице, от оффера до формы заявки. Многостраничный: несколько разделов с общим меню, например отдельная страница под каждую услугу. Если не уверены, что выбрать, подскажу на созвоне.</p>
+        </details>
+        <details>
+          <summary>Что если мне не понравится?</summary>
+          <p>Чтобы так не вышло, работаем по шагам: сначала Вы утверждаете макет, и только после этого я верстаю сайт. Правки вношу на этапе согласования, пока Вас всё не устроит. Принимаете сайт по списку из договора, а условия на случай расхождений мы фиксируем в договоре заранее.</p>
+        </details>
+        <details>
+          <summary>Когда и как платить?</summary>
+          <p>В два этапа: 50% перед началом работы и 50% после запуска, когда Вы приняли сайт. После второй оплаты передаю сайт со всеми доступами.</p>
+        </details>
+        <details>
+          <summary>Работаете с другими городами?</summary>
+          <p>Да, со всей Россией. Всё общение идёт в Telegram, WhatsApp или по видеосвязи.</p>
+        </details>
+        <details>
+          <summary>Нужно ли платить каждый месяц?</summary>
+          <p>За сам сайт нет. Отдельно оплачиваются только домен и хостинг: обычно 2–4 тысячи рублей в год. Помогу всё оформить на Вас.</p>
+        </details>
+        <details>
+          <summary>Сколько стоят правки?</summary>
+          <p>Правки на этапе согласования макета входят в цену сайта. Что считается дополнительной работой, указываю в договоре до начала, чтобы цена не менялась в процессе.</p>
+        </details>
+        <details>
+          <summary>Смогу ли я сам менять цены и фото?</summary>
+          <p>Да. После запуска покажу, как это делать, и оставлю короткую инструкцию. Если не хочется разбираться, напишите мне, и я всё поменяю.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Заявка -->
+    <section class="section order" id="order">
+      <div class="order__card">
+        <div class="order__text" data-reveal>
+          <h2 class="h2">Расскажите о Вашем деле</h2>
+          <p class="lead">Отвечу в течение часа в рабочее время и предложу, каким может быть Ваш сайт. Это бесплатно и ни к чему не обязывает.</p>
+          <!-- ЗАМЕНИТЬ: Ваши контакты -->
+          <div class="order__contacts">
+            <a href="https://t.me/smirnoff06" target="_blank" rel="noopener">Написать в Telegram</a>
+            <a href="https://max.ru/u/f9LHodD0cOL6cCrEMAV6rNQ78OK858Ngx1i6oIfUzzvpqqHcunjzLVZiFeQ" target="_blank" rel="noopener">Написать в MAX</a>
+            <a href="https://vk.ru/id702585457" target="_blank" rel="noopener">Написать во ВКонтакте</a>
+            <a href="tel:+79828346006">+7 982 834-60-06</a>
+          </div>
+        </div>
+        <form class="form" id="orderForm" novalidate data-reveal style="--d:.1s">
+          <label class="field">
+            <span>Как Вас зовут</span>
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span>Телефон или ник в Telegram</span>
+            <input name="contact" required>
+          </label>
+          <label class="field">
+            <span>Чем Вы занимаетесь</span>
+            <input name="business" placeholder="Например, барбершоп в Казани">
+          </label>
+          <label class="field">
+            <span>Тариф</span>
+            <select name="plan" id="planSelect">
+              <option>Пока не знаю</option>
+              <option>Одностраничный сайт</option>
+              <option>Многостраничный сайт</option>
+              <option>Интернет-магазин</option>
+              <option>Настройка рекламы</option>
+            </select>
+          </label>
+          <label class="check">
+            <input type="checkbox" name="consent" required>
+            <span>Согласен(-на) на обработку персональных данных и с <a href="https://tuzir2022-creator.github.io/politika.html" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a></span>
+          </label>
+          <p class="form__error" id="formError" role="alert"></p>
+          <button class="btn btn--glow btn--wide" type="submit" data-magnetic>Отправить заявку</button>
+          <p class="form__next">Что дальше: отвечу Вам, договоримся о созвоне на 20 минут, и я назову точную цену.</p>
+          <div class="form__done" id="formDone" hidden>
+            <span class="toast__icon">✓</span>
+            <p><b>Заявка отправлена</b>Напишу Вам в течение часа в рабочее время.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="#top" aria-label="Дмитрий Смирнов — наверх">
+          <span class="logo__mark">ДС</span>
+          <span class="logo__name">Дмитрий Смирнов</span>
+        </a>
+        <p>Сайты для малого бизнеса и частных специалистов по всей России</p>
+      </div>
+      <nav class="footer__nav" aria-label="Разделы в подвале">
+        <a href="#prices">Цены</a>
+        <a href="#guarantee">Гарантия</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#order">Оставить заявку</a>
+      </nav>
+      <div class="footer__legal">
+        <span>© 2026 Егор Смирнов, самозанятый, ИНН 183115419809</span>
+        <a href="https://tuzir2022-creator.github.io/politika.html" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Липкая кнопка на телефоне -->
+  <a class="mobile-cta btn btn--glow" href="#order" id="mobileCta">Обсудить мой сайт</a>
+
+  <script src="js/logger.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
