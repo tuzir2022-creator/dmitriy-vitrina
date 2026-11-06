@@ -220,10 +220,14 @@
     const header = document.getElementById("header");
     const cta = document.getElementById("mobileCta");
     const order = document.getElementById("order");
+    const toTop = document.getElementById("toTop");
+    toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" }));
     function onScroll() {
       header.classList.toggle("is-scrolled", scrollY > 30);
       const orderTop = order.getBoundingClientRect().top;
       cta.classList.toggle("is-on", scrollY > innerHeight * 0.8 && orderTop > innerHeight);
+      toTop.classList.toggle("is-on", scrollY > innerHeight * 0.8);
+      toTop.classList.toggle("is-lifted", cta.classList.contains("is-on")); // на телефоне поднимаем над липкой кнопкой
     }
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
