@@ -225,6 +225,10 @@ p { margin: 0; }
 @keyframes marker-draw { to { transform: rotate(-1.2deg) scaleX(1); } }
 @keyframes word-up { to { transform: none; } }
 
+.hero__me { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 22px; padding: 6px 18px 6px 6px; border-radius: 999px; background: var(--white); box-shadow: var(--shadow); color: var(--ink); font-weight: 600; font-size: 15px; text-decoration: none; max-width: 100%; }
+.hero__me span { min-width: 0; line-height: 1.25; }
+@media (max-width: 420px) { .hero__me { font-size: 14px; gap: 10px; padding-right: 14px; max-width: calc(100vw - 40px); } }
+.hero__me img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex: none; }
 .hero__lead { margin-top: 26px; font-size: clamp(17px, 1.6vw, 20px); color: var(--muted); max-width: 46ch; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
 .hero__facts { list-style: none; padding: 0; margin: 40px 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
